@@ -1,29 +1,26 @@
 import React from 'react'; 
-import './Login.css';
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 
-export const Login: React.FC = () => ( 
-    <div className="Login" > 
-        <Form>
-            <Form.Group as={Row} controlId="formPlaintextUsername">
-                <Form.Label column sm="2">
-                    Username:
-                </Form.Label>
-                <Col sm="10">
-                    <Form.Control type="text" placeholder="Username" />
-                </Col>
-            </Form.Group>
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
+    display: "grid",
+    justifyItems: "center",
+    margin: "10%",
+  },
+}));
 
-            <Form.Group as={Row} controlId="formPlaintextPassword">
-                <Form.Label column sm="2">
-                    Password:
-                </Form.Label>
-                <Col sm="10">
-                    <Form.Control type="password" placeholder="Password" />
-                </Col>
-            </Form.Group>
-        </Form>
-    </div> 
-);
+export default function Login() : JSX.Element {
+    const classes = useStyles();
+  
+    return (
+        <form className={classes.root} noValidate autoComplete="off">
+            <TextField id="text-username" label="Username" />
+            <TextField id="text-password" label="Password" type="password" />
+        </form>
+    );
+  }
