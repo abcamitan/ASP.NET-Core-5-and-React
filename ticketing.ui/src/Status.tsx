@@ -2,8 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
-import Header from './Header' ;
-
 const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
@@ -21,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
     
       return (
         <>
-          <Header /> 
             <form className={classes.root} noValidate autoComplete="off">
                 <TextField id="text-status" label="Status" />
             </form>
