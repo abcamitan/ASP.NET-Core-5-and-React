@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
+import { Router, Switch, Route } from "react-router-dom";
 
-import Login from './Login' ;
+import Dashboard from "./Dashboard";
+import Login from "./Login";
+import history from './History';
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <div> 
-      <Login />
-    </div>
-    );
-  }
+    render() {
+        return (
+            <Router history={history}>
+                <Switch>
+                    <Route path="/" exact component={Login} />
+                    <Route path="/Login" exact component={Login} />
+                    <Route path="/Dashboard" component={Dashboard} />
+                </Switch>
+            </Router>
+        )
+    }
 }

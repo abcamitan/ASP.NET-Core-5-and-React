@@ -4,11 +4,10 @@ import reportWebVitals from './reportWebVitals';
 
 import 'fontsource-roboto';
 import App from './App';
-import Routes from './Routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routes />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
