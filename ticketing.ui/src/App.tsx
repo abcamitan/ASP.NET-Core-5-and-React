@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import { Router, Switch, Route } from "react-router-dom";
 
 import Dashboard from "./Dashboard";
 import Login from "./Login";
 import history from './History';
 
-export default class App extends React.Component {
+export default class App extends Component {
     render() : JSX.Element {
         return (
             <Router history={history}>
