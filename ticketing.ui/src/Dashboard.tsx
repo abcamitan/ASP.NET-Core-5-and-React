@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Status from './Status';
 
-class Dashboard extends React.Component {
+class Dashboard extends Component {
   render() : JSX.Element {
     return (
       <>
