@@ -1,6 +1,6 @@
 using System;
 
-namespace ticketing.api
+namespace Ticketing.Api
 {
     public class WeatherForecast
     {
