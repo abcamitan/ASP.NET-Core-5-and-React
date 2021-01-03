@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Ticketing.Api.Services;
 
 namespace Ticketing.Api
 {
@@ -18,8 +19,10 @@ namespace Ticketing.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+            services.AddSingleton<ITicketService>(
+                new CosmosDbInitializer().InitializeServiceAsync<TicketService>(Configuration.GetSection("CosmosDb"),"Ticket")
+                    .GetAwaiter().GetResult());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
