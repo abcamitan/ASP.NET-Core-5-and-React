@@ -23,6 +23,9 @@ namespace Ticketing.Api
             services.AddSingleton<ITicketService>(
                 new CosmosDbInitializer().InitializeServiceAsync<TicketService>(Configuration.GetSection("CosmosDb"),"Ticket")
                     .GetAwaiter().GetResult());
+            services.AddSingleton<IUserService>(
+                new CosmosDbInitializer().InitializeServiceAsync<UserService>(Configuration.GetSection("CosmosDb"), "User")
+                    .GetAwaiter().GetResult());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

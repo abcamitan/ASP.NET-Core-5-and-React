@@ -5,8 +5,6 @@ using Microsoft.Extensions.Logging;
 using Ticketing.Api.Models;
 using Ticketing.Api.Services;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace Ticketing.Api.Controllers
 {
     [Route("api/[controller]")]
