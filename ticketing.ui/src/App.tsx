@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Router, Switch, Route } from "react-router-dom";
 
-import Dashboard from "./Dashboard";
-import Login from "./Login";
-import history from './History';
+import Dashboard from "./Page/Dashboard";
+import Login from "./Page/Login";
+import history from './Component/History';
 
 export default class App extends Component {
     render() : JSX.Element {

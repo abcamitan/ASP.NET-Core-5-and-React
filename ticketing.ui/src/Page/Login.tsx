@@ -3,7 +3,7 @@ import { withStyles, WithStyles, createStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-import history from './History';
+import history from '../Component/History';
 
 const styles = (theme: { spacing: (arg0: number) => unknown; }) => createStyles({
   root: {

@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 import 'fontsource-roboto';
 import App from './App';
-import Header from './Header' ;
+import Header from './Component/Header' ;
 
 ReactDOM.render(
   <React.StrictMode>
